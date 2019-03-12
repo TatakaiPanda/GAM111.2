@@ -385,6 +385,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerOneSpawnLoc: {fileID: 879035321}
   playerTwoSpawnLoc: {fileID: 48862196}
+  playerOne: {fileID: 2075451561}
+  playerTwo: {fileID: 1621244397}
   currentState: 0
 --- !u!4 &1369006639
 Transform:
@@ -521,11 +523,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fighterPreFabs:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 3819849938440400925, guid: c5f07147425b7ef4aa134386368cb9c7, type: 3}
+  - {fileID: 6349384640495780499, guid: 4a236f83b34182749b7c4d636fde4261, type: 3}
   - {fileID: 0}
   fighters: []
   selectedFighterIndex: 0
+  isAi: 0
+  isReadyForFight: 0
 --- !u!4 &1621244398
 Transform:
   m_ObjectHideFlags: 0
@@ -570,10 +574,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fighterPreFabs:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 6349384640495780499, guid: 4a236f83b34182749b7c4d636fde4261, type: 3}
+  - {fileID: 3819849938440400925, guid: c5f07147425b7ef4aa134386368cb9c7, type: 3}
   fighters: []
   selectedFighterIndex: 0
+  isAi: 0
+  isReadyForFight: 0
 --- !u!4 &2075451562
 Transform:
   m_ObjectHideFlags: 0
