@@ -108,4 +108,4 @@ MonoBehaviour:
   hp: 100
   abilities:
   - {fileID: 11400000, guid: dc583d1d3af742147a6cc3c27523dabc, type: 2}
-  selectedAbilityIndex: -1
+  selectedAbilityIndex: 0

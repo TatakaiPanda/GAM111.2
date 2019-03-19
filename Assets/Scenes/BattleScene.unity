@@ -1451,10 +1451,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fighterPreFabs:
   - {fileID: 3819849938440400925, guid: c5f07147425b7ef4aa134386368cb9c7, type: 3}
-  - {fileID: 6349384640495780499, guid: 4a236f83b34182749b7c4d636fde4261, type: 3}
-  - {fileID: 4181631919095544834, guid: 251f1d7947e16d14cb3f419d9c37ab12, type: 3}
   - {fileID: 5659026036465435320, guid: 3a506a3344c9bdb479122f55fd4e5fba, type: 3}
+  - {fileID: 6349384640495780499, guid: 4a236f83b34182749b7c4d636fde4261, type: 3}
   fighters: []
+  usedFighters: []
   selectedFighterIndex: 0
   isAi: 1
   isReadyForFight: 0
@@ -1658,11 +1658,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fighterPreFabs:
-  - {fileID: 6349384640495780499, guid: 4a236f83b34182749b7c4d636fde4261, type: 3}
   - {fileID: 3819849938440400925, guid: c5f07147425b7ef4aa134386368cb9c7, type: 3}
   - {fileID: 5659026036465435320, guid: 3a506a3344c9bdb479122f55fd4e5fba, type: 3}
-  - {fileID: 4181631919095544834, guid: 251f1d7947e16d14cb3f419d9c37ab12, type: 3}
+  - {fileID: 6349384640495780499, guid: 4a236f83b34182749b7c4d636fde4261, type: 3}
   fighters: []
+  usedFighters: []
   selectedFighterIndex: 0
   isAi: 0
   isReadyForFight: 0
