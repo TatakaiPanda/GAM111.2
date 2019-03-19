@@ -42,12 +42,15 @@ public class BattleManager : MonoBehaviour
         {
             case State.Init:
                 InitUpdate();
+                Debug.Log("Spawning the players");
 
                 break;
             case State.Awaiting:
+                Debug.Log("Choosing abillitys");
                 AwaitingAbilityUpdate();
                 break;
             case State.Attack:
+                Debug.Log("Both players are attacking");
                 // create a function to take both fighters and deal damaged based on selected ability
                 break;
             case State.CheckForWinner:

@@ -16,9 +16,11 @@ public class Trainer : MonoBehaviour
     {
         for (int i = 0; i < fighterPreFabs.Count; i++)
         {
-            var newFighter = Instantiate(fighterPreFabs[0], spawnLoc.position, spawnLoc.rotation);
+            var newFighter = Instantiate(fighterPreFabs[Random.Range(0, fighterPreFabs.Count)], spawnLoc.position, spawnLoc.rotation);
+            fighterPreFabs.Remove(newFighter);
             fighters.Add(newFighter);
             newFighter.gameObject.SetActive(false);
+            
         }
         //due to lack of selected fighter screen, defult to activating one of them
         fighters[selectedFighterIndex].gameObject.SetActive(true);
@@ -30,6 +32,13 @@ public class Trainer : MonoBehaviour
         {
             fighters[selectedFighterIndex].ChooseRandomAbility();
             isReadyForFight = true;
+        }
+        else
+        {
+            fighters[selectedFighterIndex].ChooseRandomAbility();
+            isReadyForFight = true;
+
+
         }
     }
     // Start is called before the first frame update
