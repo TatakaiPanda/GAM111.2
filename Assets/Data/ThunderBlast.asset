@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf14a0930159c824d90e4506fd5ef7f0, type: 3}
-  m_Name: Tackle
+  m_Name: ThunderBlast
   m_EditorClassIdentifier: 
-  dmg: 30
+  dmg: 60
   sfx: {fileID: 0}
   pfx: {fileID: 0}

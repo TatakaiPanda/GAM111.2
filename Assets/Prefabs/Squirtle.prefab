@@ -106,5 +106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 20
   abilities:
-  - {fileID: 11400000, guid: bfa72293ec0f7854dab861f77974a280, type: 2}
-  prefab: {fileID: 1953779753299403173}
+  - {fileID: 11400000, guid: dc583d1d3af742147a6cc3c27523dabc, type: 2}
+  - {fileID: 11400000, guid: 5f5ad57f1c320a24ca6351a745777510, type: 2}
+  - {fileID: 11400000, guid: aba6c3d66c1bf1f4d9638b3e52811aae, type: 2}
+  selectedAbilityIndex: -1
