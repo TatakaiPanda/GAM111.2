@@ -21,9 +21,12 @@ public class Fighter : MonoBehaviour
         Debug.Log(choosenAbility);
         
     }
-   public void attack()
+   public int attack(int dmg)
     {
-        choosenAbility.dmg -= hp;
+
+
+        return choosenAbility.dmg;
+       
     }
     // Start is called before the first frame update
     void Start()

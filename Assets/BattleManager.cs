@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BattleManager : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class BattleManager : MonoBehaviour
     public Transform playerOneSpawnLoc, playerTwoSpawnLoc;
     public Trainer playerOne, playerTwo;
     public Fighter fighterOne, fighterTwo;
+
+    public UnityEvent myEvent;
 
 
     public enum State
@@ -53,10 +56,12 @@ public class BattleManager : MonoBehaviour
             case State.Attack:
                Debug.Log("Both players are attacking");
                 FightSequance();
+
                 // create a function to take both fighters and deal damaged based on selected ability
 
                 break;
             case State.CheckForWinner:
+                Debug.Log("CheckingForWinners");
                 //check selected fighter on both sides is alive, if not tell get a new on 
                 // check that both sides hae a fighter, if not declare winners
                 //tell both trainers that are not ready
@@ -89,10 +94,13 @@ public class BattleManager : MonoBehaviour
     protected virtual void FightSequance()
     {
 
-        fighter.attack();
+        playerOne.Attacking();
+
+        playerTwo.Attacking();
         ChangeState(State.CheckForWinner);
 
         
 
     }
+    
 }

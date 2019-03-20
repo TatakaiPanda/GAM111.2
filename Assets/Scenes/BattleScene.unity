@@ -1148,6 +1148,24 @@ MonoBehaviour:
   playerTwoSpawnLoc: {fileID: 48862196}
   playerOne: {fileID: 2075451561}
   playerTwo: {fileID: 1621244397}
+  fighterOne: {fileID: 0}
+  fighterTwo: {fileID: 0}
+  myEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   currentState: 0
 --- !u!4 &1369006639
 Transform:
@@ -1454,7 +1472,6 @@ MonoBehaviour:
   - {fileID: 5659026036465435320, guid: 3a506a3344c9bdb479122f55fd4e5fba, type: 3}
   - {fileID: 6349384640495780499, guid: 4a236f83b34182749b7c4d636fde4261, type: 3}
   fighters: []
-  usedFighters: []
   selectedFighterIndex: 0
   isAi: 1
   isReadyForFight: 0
@@ -1662,9 +1679,8 @@ MonoBehaviour:
   - {fileID: 5659026036465435320, guid: 3a506a3344c9bdb479122f55fd4e5fba, type: 3}
   - {fileID: 6349384640495780499, guid: 4a236f83b34182749b7c4d636fde4261, type: 3}
   fighters: []
-  usedFighters: []
   selectedFighterIndex: 0
-  isAi: 0
+  isAi: 1
   isReadyForFight: 0
 --- !u!4 &2075451562
 Transform:

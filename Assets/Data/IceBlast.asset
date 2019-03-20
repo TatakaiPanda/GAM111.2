@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf14a0930159c824d90e4506fd5ef7f0, type: 3}
   m_Name: IceBlast
   m_EditorClassIdentifier: 
-  dmg: 150
+  dmg: 10
   sfx: {fileID: 0}
   pfx: {fileID: 0}

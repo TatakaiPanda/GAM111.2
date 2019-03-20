@@ -8,6 +8,7 @@ public class Trainer : MonoBehaviour
     public List<Fighter> fighterPreFabs = new List<Fighter>();
     public List<Fighter> fighters = new List<Fighter>();
     public int selectedFighterIndex;
+    public int dmg;
 
     public bool isAi = true;
     public bool isReadyForFight = false;
@@ -42,6 +43,7 @@ public class Trainer : MonoBehaviour
     {
         if (isAi)
         {
+            
             fighters[selectedFighterIndex].ChooseRandomAbility();
             isReadyForFight = true;
             
@@ -57,8 +59,8 @@ public class Trainer : MonoBehaviour
     public void Attacking()
     {
 
-
-
+        fighters[selectedFighterIndex].attack(dmg);
+        
     }
     // Start is called before the first frame update
     void Start()

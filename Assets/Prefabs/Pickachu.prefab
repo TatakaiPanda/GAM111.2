@@ -104,9 +104,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72585546b5fae274b99aee41f8f67b9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 10
+  hp: 100
   abilities:
   - {fileID: 11400000, guid: dc583d1d3af742147a6cc3c27523dabc, type: 2}
   - {fileID: 11400000, guid: bfa72293ec0f7854dab861f77974a280, type: 2}
   - {fileID: 11400000, guid: 957f60ab371553e428c605fe9d80bda1, type: 2}
   selectedAbilityIndex: -1
+  choosenAbility: {fileID: 0}
