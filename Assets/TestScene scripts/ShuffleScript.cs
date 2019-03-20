@@ -20,7 +20,7 @@ public class ShuffleScript : MonoBehaviour
     {
         for (int i = 0; i < numberList.Count; i++)
         {
-            int currentNumber = numberList.Add;
+           // int currentNumber = numberList.Add;
 
 
 

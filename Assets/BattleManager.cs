@@ -7,6 +7,7 @@ public class BattleManager : MonoBehaviour
 
     public Transform playerOneSpawnLoc, playerTwoSpawnLoc;
     public Trainer playerOne, playerTwo;
+    public Fighter fighterOne, fighterTwo;
 
 
     public enum State
@@ -42,16 +43,18 @@ public class BattleManager : MonoBehaviour
         {
             case State.Init:
                 InitUpdate();
-                // Debug.Log("Spawning the players");
+                Debug.Log("Spawning the players");
 
                 break;
             case State.Awaiting:
-               // Debug.Log("Choosing abillitys");
+               Debug.Log("Choosing abillitys");
                 AwaitingAbilityUpdate();
                 break;
             case State.Attack:
-               // Debug.Log("Both players are attacking");
+               Debug.Log("Both players are attacking");
+                FightSequance();
                 // create a function to take both fighters and deal damaged based on selected ability
+
                 break;
             case State.CheckForWinner:
                 //check selected fighter on both sides is alive, if not tell get a new on 
@@ -81,6 +84,15 @@ public class BattleManager : MonoBehaviour
         {
             ChangeState(State.Attack);
         }
+
+    }
+    protected virtual void FightSequance()
+    {
+
+        fighter.attack();
+        ChangeState(State.CheckForWinner);
+
+        
 
     }
 }
