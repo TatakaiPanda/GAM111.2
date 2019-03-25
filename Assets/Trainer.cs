@@ -13,7 +13,7 @@ public class Trainer : MonoBehaviour
     public bool isAi = true;
     public bool isReadyForFight = false;
 
-    
+
 
     public void PrepareFighters(Transform spawnLoc)
     {
@@ -43,10 +43,12 @@ public class Trainer : MonoBehaviour
     {
         if (isAi)
         {
-            
+            // Ai.tag might be non-usable
+            fighters[selectedFighterIndex].gameObject.tag = "AiFighter";
             fighters[selectedFighterIndex].ChooseRandomAbility();
+
             isReadyForFight = true;
-            
+
         }
         else
         {
@@ -56,11 +58,13 @@ public class Trainer : MonoBehaviour
 
         }
     }
-    public void Attacking()
+    public void onCheckingWinners()
     {
-
-        fighters[selectedFighterIndex].attack(dmg);
-        
+        Debug.Log("Removing fighter " + fighters[selectedFighterIndex]);
+        fighters.RemoveAt(selectedFighterIndex);
+        selectedFighterIndex++;
+        Debug.Log("Activating fighter " + fighters[selectedFighterIndex]);
+        fighters[selectedFighterIndex].gameObject.SetActive(true);
     }
     // Start is called before the first frame update
     void Start()

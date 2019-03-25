@@ -1152,20 +1152,11 @@ MonoBehaviour:
   fighterTwo: {fileID: 0}
   myEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  selectedFighter: 0
+  dmg: 0
   currentState: 0
 --- !u!4 &1369006639
 Transform:
@@ -1473,6 +1464,7 @@ MonoBehaviour:
   - {fileID: 6349384640495780499, guid: 4a236f83b34182749b7c4d636fde4261, type: 3}
   fighters: []
   selectedFighterIndex: 0
+  dmg: 0
   isAi: 1
   isReadyForFight: 0
 --- !u!4 &1621244398
@@ -1680,6 +1672,7 @@ MonoBehaviour:
   - {fileID: 6349384640495780499, guid: 4a236f83b34182749b7c4d636fde4261, type: 3}
   fighters: []
   selectedFighterIndex: 0
+  dmg: 0
   isAi: 1
   isReadyForFight: 0
 --- !u!4 &2075451562
