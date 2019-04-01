@@ -6,11 +6,13 @@ public class Fighter : MonoBehaviour
 {
 
     public int hp;
+    public int dmg;
 
     public List<Ability> abilities = new List<Ability>();
-    public int selectedAbilityIndex = -1;
+    public int selectedAbilityIndex;
     public Ability choosenAbility;
-    
+
+
 
 
 
@@ -18,27 +20,30 @@ public class Fighter : MonoBehaviour
     {
         selectedAbilityIndex = Random.Range(0, abilities.Count);
         choosenAbility = abilities[selectedAbilityIndex];
-        Debug.Log(choosenAbility);
+
         
+
+        attack();
+
     }
-   public int attack(int dmg)
+    public void attack()
     {
 
+        
+        dmg = abilities[selectedAbilityIndex].dmg;
 
-        return choosenAbility.dmg;
-       
     }
     // Start is called before the first frame update
     void Start()
     {
 
-       
-        
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

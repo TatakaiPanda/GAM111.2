@@ -7,7 +7,7 @@ public class Trainer : MonoBehaviour
 
     public List<Fighter> fighterPreFabs = new List<Fighter>();
     public List<Fighter> fighters = new List<Fighter>();
-    public int selectedFighterIndex;
+    public int selectedFighterIndex = -1;
     public int dmg;
 
     public bool isAi = true;
@@ -60,12 +60,17 @@ public class Trainer : MonoBehaviour
     }
     public void onCheckingWinners()
     {
-        Debug.Log("Removing fighter " + fighters[selectedFighterIndex]);
+
         fighters.RemoveAt(selectedFighterIndex);
-        selectedFighterIndex++;
-        Debug.Log("Activating fighter " + fighters[selectedFighterIndex]);
-        fighters[selectedFighterIndex].gameObject.SetActive(true);
+        selectedFighterIndex = 0;
+        if (fighters.Count > 0)
+        {
+
+            fighters[selectedFighterIndex].gameObject.SetActive(true);
+        }
+
     }
+
     // Start is called before the first frame update
     void Start()
     {
