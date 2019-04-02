@@ -14,9 +14,9 @@ public class playerMovement : MonoBehaviour
     {
 
         navAgent = GetComponent<NavMeshAgent>();
-        
-        
-        
+
+
+
     }
 
     // Update is called once per frame
@@ -40,11 +40,11 @@ public class playerMovement : MonoBehaviour
         }
         if (navAgent.remainingDistance <= navAgent.stoppingDistance)
         {
-            moving = true;
+            moving = false;
         }
         else
         {
-            moving = false;
+            moving = true;
         }
 
     }

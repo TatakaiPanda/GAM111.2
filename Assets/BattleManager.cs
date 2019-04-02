@@ -173,7 +173,7 @@ public class BattleManager : MonoBehaviour
         {
             Debug.Log("OnePokemond Died");
 
-            if (playerTwo.fighters.Count > 0)
+            if (playerTwo.fighters.Count > 1)
             {
 
                 Debug.Log("Players still have pokemons loop again");
@@ -198,7 +198,7 @@ public class BattleManager : MonoBehaviour
         {
             Debug.Log("OnePokemond Died");
 
-            if (playerOne.fighters.Count > 0)
+            if (playerOne.fighters.Count > 1)
             {
                 Debug.Log("Players still have pokemons loop again");
                 playerOne.onCheckingWinners();

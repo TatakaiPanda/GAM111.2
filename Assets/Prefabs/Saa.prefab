@@ -108,7 +108,7 @@ MonoBehaviour:
   hp: 100
   dmg: 0
   abilities:
-  - {fileID: 11400000, guid: 3b59d89515499af449ed675e9d57bf96, type: 2}
+  - {fileID: 11400000, guid: dc583d1d3af742147a6cc3c27523dabc, type: 2}
   - {fileID: 11400000, guid: ddc8ef26536656e41a57b125b49630df, type: 2}
   - {fileID: 11400000, guid: 5f5ad57f1c320a24ca6351a745777510, type: 2}
   selectedAbilityIndex: -1

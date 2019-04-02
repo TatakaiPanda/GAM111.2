@@ -24,6 +24,8 @@ public class PlayerManager : MonoBehaviour
         if (chanceOfEncounter + encounterModifier >= 100)
         {
             Debug.Log("Found enemy in grass!");
+            //start battle sequence
+            chanceOfEncounter = 0;
         }
         
 
@@ -32,9 +34,10 @@ public class PlayerManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "Grass")
+        if (other.gameObject.name == "Grass" && playerController.moving == true)
         {
-            Debug.Log("G");
+            encounterModifier = Random.Range(0, 100);
+            chanceOfEncounter++;
         }
     }
 }
