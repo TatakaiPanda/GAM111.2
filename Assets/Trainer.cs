@@ -13,12 +13,13 @@ public class Trainer : MonoBehaviour
     public bool isAi = true;
     public bool isReadyForFight = false;
 
+    public int buttonIndex;
 
 
     public void PrepareFighters(Transform spawnLoc)
     {
-        if (isAi)
-        {
+        
+        
             // for loop som spawnar fighters och lägger dom i en ny lista
             for (int i = 0; i < fighterPreFabs.Count; i++)
             {
@@ -33,26 +34,22 @@ public class Trainer : MonoBehaviour
             }
             //due to lack of selected fighter screen, defult to activating one of them
             fighters[selectedFighterIndex].gameObject.SetActive(true);
-        }
-        else
-        {
-            // call on player to select fighters from the array
-        }
+        
     }
     public void onAwaitingSelected()
     {
         if (isAi)
         {
-            // Ai.tag might be non-usable
-            fighters[selectedFighterIndex].gameObject.tag = "AiFighter";
-            fighters[selectedFighterIndex].ChooseRandomAbility();
+            
+            fighters[selectedFighterIndex].ChooseAbility();
 
             isReadyForFight = true;
 
         }
         else
         {
-            fighters[selectedFighterIndex].ChooseRandomAbility();
+            fighters[selectedFighterIndex].ChooseAbility();
+            Debug.Log(fighters[selectedFighterIndex].choosenAbility);
             isReadyForFight = true;
 
 
@@ -60,7 +57,7 @@ public class Trainer : MonoBehaviour
     }
     public void onCheckingWinners()
     {
-
+        fighters[selectedFighterIndex].gameObject.SetActive(false);
         fighters.RemoveAt(selectedFighterIndex);
         selectedFighterIndex = 0;
         if (fighters.Count > 0)
@@ -70,6 +67,11 @@ public class Trainer : MonoBehaviour
         }
 
     }
+    public void selectedAbility(int buttonIndex)
+    {
+
+    }
+
 
     // Start is called before the first frame update
     void Start()

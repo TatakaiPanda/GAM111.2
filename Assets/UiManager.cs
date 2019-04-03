@@ -13,15 +13,16 @@ public class UiManager : MonoBehaviour
     public Text fighterTwoHp;
     public Text TrainerOneList;
     public Text TrainerTwoList;
-    public Text choosenAbillityOne;
-    public Text choosenAbillityTwo;
+    public Text availableAbillityOne;
+    public Text availableAbillityTwo;
+    public Text availableAbillityThree;
     public Text choosenAbillityDmgOne;
     public Text choosenAbillityDmgTwo;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -29,16 +30,20 @@ public class UiManager : MonoBehaviour
     {
         fighterUI();
         TrainerUi();
+        AbillitysUI();
     }
     void fighterUI()
     {
         fighterOneHp.text = managBattles.fighterOne.hp.ToString("fighterOnes hp is: " + managBattles.fighterOne.hp);
         fighterTwoHp.text = managBattles.fighterTwo.hp.ToString("fighterOnes hp is: " + managBattles.fighterTwo.hp);
-
-
     }
     void AbillitysUI()
     {
+        // availableAbillityOne.text = managBattles.fighterOne.abilities[0].ToString();
+        // availableAbillityTwo.text = managBattles.fighterOne.abilities[1].ToString();
+        //availableAbillityThree.text = managBattles.fighterOne.abilities[2].ToString();
+
+
 
     }
     void TrainerUi()

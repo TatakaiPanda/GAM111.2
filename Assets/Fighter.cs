@@ -11,35 +11,46 @@ public class Fighter : MonoBehaviour
     public List<Ability> abilities = new List<Ability>();
     public int selectedAbilityIndex;
     public Ability choosenAbility;
+    public Trainer isTrainer;
 
-
-
-
-
-    public void ChooseRandomAbility()
+    // Start is called before the first frame update
+    void Start()
     {
-        selectedAbilityIndex = Random.Range(0, abilities.Count);
-        choosenAbility = abilities[selectedAbilityIndex];
 
-        
+        isTrainer = FindObjectOfType<Trainer>();
 
-        attack();
+    }
+
+
+    public void ChooseAbility()
+    {
+        if (isTrainer.isAi == true)
+        {
+
+            selectedAbilityIndex = Random.Range(0, abilities.Count);
+            choosenAbility = abilities[selectedAbilityIndex];
+
+            attack();
+
+        }
+        else
+        {
+            selectedAbilityIndex = isTrainer.buttonIndex;
+            choosenAbility = abilities[selectedAbilityIndex];
+
+            attack();
+        }
 
     }
     public void attack()
     {
 
-        
+
         dmg = abilities[selectedAbilityIndex].dmg;
 
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-
-
-
-    }
+    
+ 
 
     // Update is called once per frame
     void Update()

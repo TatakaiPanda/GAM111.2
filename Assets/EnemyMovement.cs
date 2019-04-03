@@ -11,6 +11,10 @@ public class EnemyMovement : MonoBehaviour
     public Transform[] travelPos;
     public int chosenTravelPos = -1;
 
+    private int minDelay;
+    private int maxDelay;
+     
+
     private bool isLookingToPatroll = false;
 
     // Start is called before the first frame update

@@ -57,15 +57,15 @@ public class BattleManager : MonoBehaviour
 
                 fighterOne = playerOne.fighters[selectedFighterOne];
                 fighterTwo = playerTwo.fighters[selectedFighterTwo];
-                Debug.Log("Spawning the players");
+             //   Debug.Log("Spawning the players");
 
                 break;
             case State.Awaiting:
-                Debug.Log("Choosing abillitys");
+              //  Debug.Log("Choosing abillitys");
                 AwaitingAbilityUpdate();
                 break;
             case State.Attack:
-                Debug.Log("Both players are attacking");
+               // Debug.Log("Both players are attacking");
 
                 // players deal damage
                 FightSequance();
@@ -74,7 +74,7 @@ public class BattleManager : MonoBehaviour
 
                 break;
             case State.CheckForWinner:
-                Debug.Log("Checking if any fighter is dead");
+              //  Debug.Log("Checking if any fighter is dead");
 
                 //check selected fighter on both sides is alive, if not tell get a new on 
                 // check that both sides hae a fighter, if not declare winners
@@ -85,6 +85,9 @@ public class BattleManager : MonoBehaviour
                 playerTwo.isReadyForFight = false;
                 break;
             case State.WhoWon:
+
+                //show who won and then move back to overworld
+
                 Debug.Log("PlayerTwo loses");
                 Debug.Log("PlayerOne loses");
                 break;
@@ -102,7 +105,7 @@ public class BattleManager : MonoBehaviour
 
     protected virtual void AwaitingAbilityUpdate()
     {
-        playerOne.onAwaitingSelected();
+       // playerOne.onAwaitingSelected();
         playerTwo.onAwaitingSelected();
 
         if (playerOne.isReadyForFight && playerTwo.isReadyForFight)
@@ -117,7 +120,7 @@ public class BattleManager : MonoBehaviour
         fighterTwo = playerTwo.fighters[selectedFighterTwo];
 
         int startVar = Random.Range(0, 1);
-        Debug.Log("startVar was: " + startVar);
+       // Debug.Log("startVar was: " + startVar);
 
         // 0 = player two attacks first 1 = player gets to attack first then change states after dealing dmg
         if (startVar == 0)
@@ -164,19 +167,19 @@ public class BattleManager : MonoBehaviour
         if (fighterOne.hp > 0 && fighterTwo.hp > 0)
         {
 
-            Debug.Log("Both players are alive, loop again");
+          //  Debug.Log("Both players are alive, loop again");
             ChangeState(State.Awaiting);
         }
 
         // If fighterOne is alive and fighterTwo is dead, get a new pokemon for fighterTwo, if fighterTwo dont have anymore fighters playerTwo loses;
         else if (fighterOne.hp > 0 && fighterTwo.hp <= 0)
         {
-            Debug.Log("OnePokemond Died");
+           // Debug.Log("OnePokemond Died");
 
             if (playerTwo.fighters.Count > 1)
             {
 
-                Debug.Log("Players still have pokemons loop again");
+               // Debug.Log("Players still have pokemons loop again");
                 playerTwo.onCheckingWinners();
                 ChangeState(State.Awaiting);
 
@@ -184,9 +187,9 @@ public class BattleManager : MonoBehaviour
             else
             {
 
-                Debug.Log("trainer dont have anymore pokemons");
+               // Debug.Log("trainer dont have anymore pokemons");
                 playerTwo.onCheckingWinners();
-                Debug.Log("PlayerTwo loses");
+               // Debug.Log("PlayerTwo loses");
                 ChangeState(State.WhoWon);
 
 
@@ -196,11 +199,11 @@ public class BattleManager : MonoBehaviour
         // if fighterOne is dead and fighterTwo is alive, get a new pokemon for fighterOne, if fighterOne dont have anymore fighters playerOne loses;
         else if (fighterOne.hp <= 0 && fighterTwo.hp > 0)
         {
-            Debug.Log("OnePokemond Died");
+           // Debug.Log("OnePokemond Died");
 
             if (playerOne.fighters.Count > 1)
             {
-                Debug.Log("Players still have pokemons loop again");
+               // Debug.Log("Players still have pokemons loop again");
                 playerOne.onCheckingWinners();
                 ChangeState(State.Awaiting);
 
@@ -208,7 +211,7 @@ public class BattleManager : MonoBehaviour
             }
             else
             {
-                Debug.Log("trainer dont have anymore pokemons");
+               // Debug.Log("trainer dont have anymore pokemons");
                 playerOne.onCheckingWinners();
                 ChangeState(State.WhoWon);
             }
